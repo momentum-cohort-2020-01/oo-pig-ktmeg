@@ -7,32 +7,33 @@ def roll():
 
 
 class Game:
-  def __init__(self, score):
-    self.score = score 
+  def __init__(self):
     self.player = Player()
-
-
-    
+    self.comp_player = CompPlayer()
+    self.score = {self.player: 0, self.comp_player: 0}
+   
  
 class Player:
   def __init__(self):
-    self.points = 0
+    self.points = 0 
 
   def player_roll(self):
     choice = input('Do you want to "R"oll or "S"tay?')
-    print(choice)
-    return choice
-
-
+    if choice == "r": 
+      print('Your roll is a', roll())
+      return choice
     
-  
-  # def player_score(self,score)
+  def rolls(self):
+    rolls= []
+    rolls.list.append(roll())
+    Sum = sum(roll())
+    print(Sum) 
+    return Sum    
 
 class CompPlayer:
-  def __init__(self):
-    self.points = 0
+  def __init__(self, score):
+    self.score = 0
 
-  pass
   
 player = Player()
 player.player_roll()
