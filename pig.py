@@ -25,7 +25,7 @@ class Player:
     
   def rolls(self):
     rolls= []
-    rolls.list.append(roll())
+    rolls.append(roll())
     Sum = sum(roll())
     print(Sum) 
     return Sum    
@@ -37,3 +37,4 @@ class CompPlayer:
   
 player = Player()
 player.player_roll()
+player.rolls()
