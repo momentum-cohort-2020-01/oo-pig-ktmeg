@@ -10,31 +10,42 @@ class Game:
   def __init__(self):
     self.player = Player()
     self.comp_player = CompPlayer()
-    self.score = {self.player: 0, self.comp_player: 0}
-   
- 
+    self.play_game 
+    
 class Player:
   def __init__(self):
-    self.points = 0 
+    self.round_points = 0 
+    self.total_score = 0
 
   def player_roll(self):
     choice = input('Do you want to "R"oll or "S"tay?')
     if choice == "r": 
       print('Your roll is a', roll())
+    elif choice == "h":
+      print("It's the computer's turn!")
       return choice
     
-  def rolls(self):
-    rolls= []
-    rolls.append(roll())
-    Sum = sum(roll())
-    print(Sum) 
-    return Sum    
+  # def rolls(self):
+  #   rolls= []
+  #   rolls.extend(roll())
+  #   Sum = sum(rolls) 
+  #   print(Sum)
+  #   return Sum 
 
 class CompPlayer:
-  def __init__(self, score):
-    self.score = 0
+  def __init__(self):
+    self.round_points = 0
+    self.total_score = 0
+
+  def conmputer_roll(self):
+    while self.round_score < 20:
+        roll()
+    if self.total_score >= 100:
+        print("Computer Wins!")
+        return
+
 
   
 player = Player()
 player.player_roll()
-player.rolls()
+# player.rolls()
