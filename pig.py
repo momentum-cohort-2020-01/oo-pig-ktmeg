@@ -17,13 +17,22 @@ class Player:
     self.round_points = 0 
     self.total_score = 0
 
-  def player_roll(self):
+  def roll_hold(self):
     choice = input('Do you want to "R"oll or "S"tay?')
-    if choice == "r": 
-      print('Your roll is a', roll())
-    elif choice == "h":
-      print("It's the computer's turn!")
-      return choice
+    return choice 
+
+
+  def player_roll(self):
+      roll_score = roll() 
+      self.player.round.points += roll_score
+
+  def player_turn(self):
+    input = self.roll_hold()
+    if input == "R":
+      self.player_roll()
+    else:
+      retun False 
+
     
   # def rolls(self):
   #   rolls= []
